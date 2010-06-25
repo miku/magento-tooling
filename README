@@ -1,0 +1,27 @@
+README
+======
+
+Small magento-related analgesics.
+
+
+``migration/fabfile.py``
+
+Approach from 
+
+http://activecodeline.com/moving-magento-site-from-development-to-live-server
+
+to move a magento from one location to another coded in *fabric*.
+
+Use ``migration.cfg`` to specify your locations. Double-check
+those entries, since we have some destructive commands in here,
+which will e.g. wipe out destination directories before placing a new copy.
+
+When configured, just run
+
+    fab migrate:your_configuration_file
+    
+
+Prerequisites:
+
+    - python and fabric installed
+    - a password-less ssh connection via keys
